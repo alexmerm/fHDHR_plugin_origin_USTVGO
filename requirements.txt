@@ -1,3 +1,4 @@
 selenium
 selenium-wire
 lxml
+geckodriver-autoinstaller

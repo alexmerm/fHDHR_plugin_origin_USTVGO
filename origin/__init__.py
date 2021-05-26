@@ -6,6 +6,7 @@ import sys
 from seleniumwire import webdriver
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
+import geckodriver_autoinstaller
 
 IFRAME_CSS_SELECTOR = '.iframe-container>iframe'
 
@@ -134,6 +135,7 @@ class Plugin_OBJ():
         return streamurl
 
     def get_firefox_driver(self):
+        geckodriver_autoinstaller.install()
         ff_options = FirefoxOptions()
         ff_options.add_argument('--headless')
 
